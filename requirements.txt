@@ -1,0 +1,6 @@
+aws-encryption-sdk>=1.4.1
+pathlib==1.0.1
+pyyaml>=5.3.1
+confluent-kafka>=1.4.1
+avro>=1.9.2
+avro-python3

@@ -1,0 +1,22 @@
+Kafka:
+  brokers: 'brook.nonprod.us-west-2.aws.com:9092'
+  offset: 213
+  topic: mytopic
+  groupid: mygroup
+  schema.registry: 'https://mygroup.xxx:xxx@schema-registry.nonprod.us-west-2.aws.com'
+  properties:
+    sasl.mechanisms: SCRAM-SHA-512
+    sasl.username: mygroup.xxx
+    sasl.password: xxx
+    security.protocol: SASL_SSL
+
+KMS:
+  KeyId: alias/main/default
+  region: us-west-2
+  EncryptionAlgorithm: 'SYMMETRIC_DEFAULT'
+
+AWSEncryptionSDK:
+  KeyId: arn:aws:kms:eu-central-1:1234567890123:key/f80f19e7-d1e1-4405-a189-ed7c9cc710c0
+  encryption_context:
+    purpose: test
+    "aws-crypto-public-key": "xxx"
